@@ -9,7 +9,7 @@ const ContactImage = () => {
     <div className="w-full md:h-auto rounded-xl flex items-center justify-center mb-6">
       {/* Image */}
       <img
-        src="/images/CON.jpg"
+        src="/images/sfdf.jpg"
         alt="Contact"
         className="rounded-xl w-88 h-88 object-cover border-2 border-blue-400/50 shadow-lg"
       />
