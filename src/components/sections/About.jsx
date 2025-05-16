@@ -92,16 +92,16 @@ export const About = () => {
               <h3 className="text-xl font-bold mb-4">🏫 Education</h3>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
                 <li>
-                  <strong>B.S. in Computer Engineering</strong> - Cebu Institute
+                  <strong className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">B.S. in Computer Engineering</strong> - Cebu Institute
                   of Technology (2022 - Present)
                 </li>
                 <li>
-                  <strong>University of Cebu Banilad</strong> - Science,
+                    <strong className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">University of Cebu Banilad</strong> - Science,
                   Technology, Engineering and Mathematics Senior High School (2020
                   - 2022)
                 </li>
                 <li>
-                  <strong>Mantalongon National High School</strong> - Junior High
+                    <strong className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">Mantalongon National High School</strong> - Junior High
                   School (2016 - 2020)
                 </li>
               </ul>
@@ -118,21 +118,21 @@ export const About = () => {
               <div className="space-y-4 text-gray-300">
                 <div>
                   <h4 className="font-semibold">
-                    <strong>Christian Fellowship sa CIT-U</strong>
+                    <strong className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">Christian Fellowship sa CIT-U</strong>
                   </h4>
                   <p>Finance Officer</p>
                   <p>SY 2024 - 2025</p>
                 </div>
                 <div>
                   <h4 className="font-semibold">
-                    <strong>ICPEP.SE CIT-U CHAPTER</strong>
+                    <strong className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">ICPEP.SE CIT-U CHAPTER</strong>
                   </h4>
                   <p>External Affairs Committee</p>
                   <p>SY 2024 - 2025</p>
                 </div>
                 <div>
                   <h4 className="font-semibold">
-                    <strong>Google Developers Groups on CIT-U</strong>
+                    <strong className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">Google Developers Groups on CIT-U</strong>
                   </h4>
                   <p>Member</p>
                   <p>SY 2024 - 2025</p>

@@ -28,16 +28,16 @@ export const Home = () => {
             <a
               href={resumeFile}
               download="Angelina Mier_Resume.pdf"
-              className="bg-blue-500 text-white py-2 px-4 sm:py-3 sm:px-6 rounded-3xl font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] flex items-center gap-2"
+              className="bg-gradient-to-r from-black-600 to-blue-500 text-white py-2 px-4 sm:py-3 sm:px-6 rounded-3xl font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] flex items-center gap-2"
               target="_blank"
               rel="noopener noreferrer"
             >
               <File className="w-5 h-5" />
-              Review My Resume
+              Download My Resume
             </a>
             <a
               href="#contact"
-              className="border border-blue-500/50 text-blue-500 py-2 px-4 sm:py-3 sm:px-6 rounded-3xl font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:bg-blue-500/10"
+              className="border border-blue-500/50 text-white py-2 px-4 sm:py-3 sm:px-6 rounded-3xl font-medium transition duration-200 hover:bg-gradient-to-r from-black-600 to-blue-500  hover:-translate-y-0.5 hover:text-white active:bg-blue-500 active:text-white"
             >
               Contact Me
             </a>
