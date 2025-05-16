@@ -6,16 +6,20 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black/70 flex items-start justify-center z-[1000] overflow-y-auto py-4 sm:py-8"
+      className={`fixed inset-0 bg-black/70 flex items-start justify-center z-[1000] overflow-y-auto py-4 sm:py-8 transition-opacity duration-300 ease-in-out ${
+        isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      }`}
       onClick={onClose}
     >
       <div
-        className="bg-gradient-to-b from-black to-blue-500/40 rounded-xl w-full max-w-2xl mx-4 p-6 sm:p-8 border border-white/20 my-4 sm:my-8 relative shadow-xl"
+        className={`bg-gradient-to-b from-black to-blue-500/40 rounded-xl w-full max-w-2xl mx-4 p-6 sm:p-8 border border-white/20 my-4 sm:my-8 relative shadow-xl transition-transform duration-300 ease-in-out ${
+          isOpen ? 'scale-100 opacity-100 translate-y-0' : 'scale-95 opacity-0 translate-y-4'
+        }`}
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-white hover:text-gray-200 transition-colors z-[1001] bg-gray-900/80 rounded-full p-2"
+          className="absolute top-4 right-4 text-white hover:text-blue-500 transition-colors z-[1001] bg-gray-900/80 rounded-full p-2"
           aria-label="Close modal"
         >
           <svg
@@ -32,7 +36,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
             />
           </svg>
         </button>
-        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 pr-12">
+       <h2 className="bg-gradient-to-r from-blue-200 to-cyan-500 bg-clip-text text-transparent text-3xl sm:text-3xl font-bold mb-6 pr-12">
           {project.title}
         </h2>
         <img
