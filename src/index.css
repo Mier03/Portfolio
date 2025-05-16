@@ -3,9 +3,9 @@
 @import 'swiper/css/pagination';
 
 html,
-body{
-  margin:0;
-  padding:0;
+body {
+  margin: 0;
+  padding: 0;
   font-family: "Space Grotesk", sans-serif;
   background-color: #070706;
   color: #fff;
@@ -37,6 +37,19 @@ body{
 
   .animate-loading-bar {
     animation: loading 0.8s ease infinite;
+  }
+
+  /* Dance animation for hover effect */
+  @keyframes dance {
+    0% { transform: translateY(-0.25rem) rotate(0deg); }
+    25% { transform: translateY(-0.25rem) rotate(1deg); }
+    50% { transform: translateY(-0.25rem) rotate(0deg); }
+    75% { transform: translateY(-0.25rem) rotate(-1deg); }
+    100% { transform: translateY(-0.25rem) rotate(0deg); }
+  }
+
+  .hover\:animate-dance:hover {
+    animation: dance 0.5s ease-in-out;
   }
 }
 

@@ -1,6 +1,21 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
+import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react"; // Import icons
+import { motion } from "framer-motion";
+
+const ContactImage = () => {
+  return (
+    <div className="w-full md:h-auto rounded-xl flex items-center justify-center mb-6">
+      {/* Image */}
+      <img
+        src="/images/CON.jpg"
+        alt="Contact"
+        className="rounded-xl w-88 h-88 object-cover border-2 border-blue-400/50 shadow-lg"
+      />
+    </div>
+  );
+};
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,72 +41,111 @@ export const Contact = () => {
       .catch(() => alert("Oops! Something went wrong. Please try again."));
   };
 
+  // Animation variants
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const contactInfoVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.4,
+        delay: 0.2,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center py-20"
+      className="min-h-screen flex items-center justify-center py-20 bg-gradient-to-br from-black to-black"
     >
       <RevealOnScroll>
-        <div className="px-4 w-full min-w-[300px] md:w-[500px] sm:w-2/3 p-6">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-            {" "}
-            Get In Touch
-          </h2>
-          <form className="space-y-6" onSubmit={handleSubmit}>
-            <div className="relative">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                value={formData.name}
-                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                placeholder="Name..."
-                onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
-                }
-              />
+        <motion.div
+          variants={cardVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="flex flex-col md:flex-row w-full max-w-4xl bg-gradient-to-br from-black to-blue-900/90 backdrop-blur-md rounded-xl shadow-2xl border border-white/10 p-8 md:p-10"
+        >
+          {/* Contact Card Section */}
+          <motion.div
+            variants={contactInfoVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="md:w-1/2 space-y-4 flex flex-col items-start md:order-2 " // Adjusted : removed  md:ml-8
+          >
+            <h2 className="text-3xl font-bold text-white text-left mb-4">
+              Contact Me
+            </h2>
+            <p className="text-md text-gray-300 text-left">
+              Feel free to reach out to me for any inquiries or collaboration
+              opportunities.
+            </p>
+            <div className="space-y-3 w-full">
+              <div className="flex items-center gap-2">
+                <Mail className="w-5 h-5 text-blue-300" />
+                <a
+                  href="mailto: mierangelina03@gmail.com"
+                  className="text-md text-gray-200 hover:text-blue-300 transition-colors"
+                >
+                  mierangelina03@gmail.com
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-5 h-5 text-blue-300" />
+                <span className="text-md text-gray-200">Phone: +123 456 7890</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <MapPin className="w-5 h-5 mt-1 text-blue-300" />
+                <span className="text-md text-gray-200">
+                  Address: 123 Main St, Anytown, USA
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Linkedin className="w-5 h-5 text-blue-300" />
+                <a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-md text-blue-300 hover:underline"
+                >
+                  LinkedIn Profile
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Github className="w-5 h-5 text-blue-300" />
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-md text-blue-300 hover:underline"
+                >
+                  GitHub Profile
+                </a>
+              </div>
             </div>
-
-            <div className="relative">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                value={formData.email}
-                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                placeholder="example@gmail.com"
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-              />
-            </div>
-
-            <div className="relative">
-              <textarea
-                id="message"
-                name="message"
-                required
-                rows={5}
-                value={formData.message}
-                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                placeholder="Your Message..."
-                onChange={(e) =>
-                  setFormData({ ...formData, message: e.target.value })
-                }
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
+          </motion.div>
+          <div className="md:w-1/2 md:order-1 flex items-center justify-center">
+            <ContactImage />
+          </div>
+        </motion.div>
       </RevealOnScroll>
     </section>
   );
 };
+
