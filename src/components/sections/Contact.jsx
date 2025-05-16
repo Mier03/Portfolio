@@ -81,13 +81,17 @@ export const Contact = () => {
           viewport={{ once: true }}
           className="flex flex-col md:flex-row w-full max-w-4xl bg-gradient-to-br from-black to-blue-900/90 backdrop-blur-md rounded-xl shadow-2xl border border-white/10 p-8 md:p-10"
         >
+          {/* Contact Image Section */}
+          <div className="md:w-1/2 flex items-center justify-center md:order-1">
+            <ContactImage />
+          </div>
           {/* Contact Card Section */}
           <motion.div
             variants={contactInfoVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="md:w-1/2 space-y-4 flex flex-col items-start md:order-2 " // Adjusted : removed  md:ml-8
+            className="md:w-1/2 space-y-4 flex flex-col items-start md:order-2"
           >
             <h2 className="text-3xl font-bold text-white text-left mb-4">
               Contact Me
@@ -100,7 +104,7 @@ export const Contact = () => {
               <div className="flex items-center gap-2">
                 <Mail className="w-5 h-5 text-blue-300" />
                 <a
-                  href="mailto: mierangelina03@gmail.com"
+                  href="mailto:mierangelina03@gmail.com"
                   className="text-md text-gray-200 hover:text-blue-300 transition-colors"
                 >
                   mierangelina03@gmail.com
@@ -108,18 +112,18 @@ export const Contact = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5 text-blue-300" />
-                <span className="text-md text-gray-200">Phone: +123 456 7890</span>
+                <span className="text-md text-gray-200">Phone: +63 930 2658 865</span>
               </div>
               <div className="flex items-start gap-2">
                 <MapPin className="w-5 h-5 mt-1 text-blue-300" />
                 <span className="text-md text-gray-200">
-                  Address: 123 Main St, Anytown, USA
+                  Address: Nalhub, Dalaguete, Cebu
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <Linkedin className="w-5 h-5 text-blue-300" />
                 <a
-                  href="https://www.linkedin.com"
+                  href="https://www.linkedin.com/in/angelina-mier-593460358/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-md text-blue-300 hover:underline"
@@ -130,7 +134,7 @@ export const Contact = () => {
               <div className="flex items-center gap-2">
                 <Github className="w-5 h-5 text-blue-300" />
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Mier03"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-md text-blue-300 hover:underline"
@@ -140,12 +144,8 @@ export const Contact = () => {
               </div>
             </div>
           </motion.div>
-          <div className="md:w-1/2 md:order-1 flex items-center justify-center">
-            <ContactImage />
-          </div>
         </motion.div>
       </RevealOnScroll>
     </section>
   );
 };
-

@@ -1,10 +1,14 @@
+import React, { useState } from 'react';
 import { RevealOnScroll } from "../RevealOnScroll";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
+import { File } from 'lucide-react'; // Import the File icon
 
 export const Home = () => {
+  const [resumeFile] = useState('Angelina Mier_Resume.pdf'); // Store resume file path
+
   return (
     <section
       id="home"
@@ -13,23 +17,27 @@ export const Home = () => {
       <RevealOnScroll>
         <div className="text-left z-10 max-w-2xl w-full md:ml-50 mb-8 md:mb-0">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
-          Hi👋, I'm Angelina Mier
+            Hi👋, I'm Angelina Mier
           </h1>
           <p className="text-gray-400 text-base sm:text-lg mb-8">
             I’m a Computer Engineering student at Cebu Institute of Technology who loves crafting clean, scalable web
             applications. My goal is to build solutions that offer both
             exceptional performance and a delightful user experience.
           </p>
-          <div className="flex justify-start space-x-4">
+          <div className="flex justify-start space-x-4 flex-nowrap">
             <a
-              href="#projects"
-              className="bg-blue-500 text-white py-2 px-4 sm:py-3 sm:px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
+              href={resumeFile}
+              download="Angelina Mier_Resume.pdf"
+              className="bg-blue-500 text-white py-2 px-4 sm:py-3 sm:px-6 rounded-3xl font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] flex items-center gap-2"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              View Projects
+              <File className="w-5 h-5" />
+              Review My Resume
             </a>
             <a
               href="#contact"
-              className="border border-blue-500/50 text-blue-500 py-2 px-4 sm:py-3 sm:px-6 rounded font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:bg-blue-500/10"
+              className="border border-blue-500/50 text-blue-500 py-2 px-4 sm:py-3 sm:px-6 rounded-3xl font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:bg-blue-500/10"
             >
               Contact Me
             </a>
@@ -71,3 +79,4 @@ export const Home = () => {
     </section>
   );
 };
+

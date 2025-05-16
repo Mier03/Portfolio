@@ -1,8 +1,15 @@
+import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 
 export const About = () => {
   const frontendSkills = ["React", "TypeScript", "TailwindCSS", "HTML/CSS"];
   const backendSkills = ["Node.js", "Appwrite", "Firebase", "PHP", "mySQL"];
+  const [activeCard, setActiveCard] = useState(null); // Track which card is tapped
+
+  // Toggle active state for a specific card
+  const handleCardTap = (cardId) => {
+    setActiveCard(activeCard === cardId ? null : cardId); // Toggle on/off
+  };
 
   return (
     <section
@@ -16,7 +23,12 @@ export const About = () => {
           </h2>
 
           <div
-            className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all hover:border-blue-500/30 hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)] hover:animate-dance"
+            className={`rounded-xl p-8 border-white/10 border transition-all hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_4px_20px_rgba(59,130,246,0.2)] hover:animate-dance ${
+              activeCard === "main"
+                ? "shadow-[0_4px_20px_rgba(59,130,246,0.2)] border-blue-500/30 -translate-y-1 animate-dance"
+                : ""
+            }`}
+            onTouchStart={() => handleCardTap("main")}
           >
             <p className="text-gray-300 mb-6">
               Eager to apply technical skills, learn new technologies, and support
@@ -25,7 +37,12 @@ export const About = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div
-                className="rounded-xl p-6 border-white/10 border hover:-translate-y-1 transition-all hover:border-blue-500/30 hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)] hover:animate-dance"
+                className={`rounded-xl p-6 border-white/10 border transition-all hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_4px_20px_rgba(59,130,246,0.2)] hover:animate-dance ${
+                  activeCard === "frontend"
+                    ? "shadow-[0_4px_20px_rgba(59,130,246,0.2)] border-blue-500/30 -translate-y-1 animate-dance"
+                    : ""
+                }`}
+                onTouchStart={() => handleCardTap("frontend")}
               >
                 <h3 className="text-xl font-bold mb-4">Frontend</h3>
                 <div className="flex flex-wrap gap-2">
@@ -41,7 +58,12 @@ export const About = () => {
               </div>
 
               <div
-                className="rounded-xl p-6 border-white/10 border hover:-translate-y-1 transition-all hover:border-blue-500/30 hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)] hover:animate-dance"
+                className={`rounded-xl p-6 border-white/10 border transition-all hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_4px_20px_rgba(59,130,246,0.2)] hover:animate-dance ${
+                  activeCard === "backend"
+                    ? "shadow-[0_4px_20px_rgba(59,130,246,0.2)] border-blue-500/30 -translate-y-1 animate-dance"
+                    : ""
+                }`}
+                onTouchStart={() => handleCardTap("backend")}
               >
                 <h3 className="text-xl font-bold mb-4">Backend</h3>
                 <div className="flex flex-wrap gap-2">
@@ -60,7 +82,12 @@ export const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
             <div
-              className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all hover:border-blue-500/30 hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)] hover:animate-dance"
+              className={`p-6 rounded-xl border-white/10 border transition-all hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_4px_20px_rgba(59,130,246,0.2)] hover:animate-dance ${
+                activeCard === "education"
+                  ? "shadow-[0_4px_20px_rgba(59,130,246,0.2)] border-blue-500/30 -translate-y-1 animate-dance"
+                  : ""
+              }`}
+              onTouchStart={() => handleCardTap("education")}
             >
               <h3 className="text-xl font-bold mb-4">🏫 Education</h3>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
@@ -80,7 +107,12 @@ export const About = () => {
               </ul>
             </div>
             <div
-              className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all hover:border-blue-500/30 hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)] hover:animate-dance"
+              className={`p-6 rounded-xl border-white/10 border transition-all hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_4px_20px_rgba(59,130,246,0.2)] hover:animate-dance ${
+                activeCard === "organizations"
+                  ? "shadow-[0_4px_20px_rgba(59,130,246,0.2)] border-blue-500/30 -translate-y-1 animate-dance"
+                  : ""
+              }`}
+              onTouchStart={() => handleCardTap("organizations")}
             >
               <h3 className="text-xl font-bold mb-4">📇 Organizations</h3>
               <div className="space-y-4 text-gray-300">
