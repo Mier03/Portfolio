@@ -19,29 +19,27 @@ export const Home = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
             Hi👋, I'm Angelina Mier
           </h1>
-          <p className="text-gray-400 text-base sm:text-lg mb-8">
-            I’m a Computer Engineering student at Cebu Institute of Technology who loves crafting clean, scalable web
-            applications. My goal is to build solutions that offer both
-            exceptional performance and a delightful user experience.
+          <p className="text-gray-400 text-base sm:text-lg mb-8"  style={{ textAlign: 'justify' }}>
+            A Computer Engineering student at Cebu Institute of Technology, driven by a strong passion for building purposeful and scalable solutions that meet real-world business needs. I take pride in creating clean, efficient web applications that go beyond functionality—delivering seamless performance and intuitive user experiences. I'm seeking an internship where I can contribute to an innovative development team, apply and grow my technical skills, and collaborate on impactful software and hardware projects that solve meaningful problems.
           </p>
-          <div className="flex justify-start space-x-4 flex-nowrap">
-            <a
-              href={resumeFile}
-              download="Angelina Mier_Resume.pdf"
-              className="bg-gradient-to-r from-black-600 to-blue-500 text-white py-2 px-4 sm:py-3 sm:px-6 rounded-3xl font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] flex items-center gap-2"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <File className="w-5 h-5" />
-              Download My Resume
-            </a>
-            <a
-              href="#contact"
-              className="border border-blue-500/50 text-white py-2 px-4 sm:py-3 sm:px-6 rounded-3xl font-medium transition duration-200 hover:bg-gradient-to-r from-black-600 to-blue-500  hover:-translate-y-0.5 hover:text-white active:bg-blue-500 active:text-white"
-            >
-              Contact Me
-            </a>
-          </div>
+        <div className="flex justify-start gap-2 sm:space-x-4 flex-nowrap">
+  <a
+    href={resumeFile}
+    download="Angelina Mier_Resume.pdf"
+    className="bg-gradient-to-r from-black-600 to-blue-500 text-white py-1.5 px-3 sm:py-3 sm:px-4 rounded-3xl font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] flex items-center gap-2 whitespace-nowrap text-sm sm:text-sm"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <File className="w-4 h-4 sm:w-5 sm:h-5" />
+    <span>Download My Resume</span>
+  </a>
+  <a
+    href="#contact"
+    className="border border-blue-500/50 text-white py-1.5 px-3 sm:py-3 sm:px-4 rounded-3xl font-medium transition duration-200 hover:bg-gradient-to-r from-black-600 to-blue-500  hover:-translate-y-0.5 hover:text-white active:bg-blue-500 active:text-white whitespace-nowrap text-sm sm:text-sm"
+  >
+    Contact Me
+  </a>
+</div>
         </div>
       </RevealOnScroll>
 
