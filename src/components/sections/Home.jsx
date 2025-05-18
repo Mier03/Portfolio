@@ -7,7 +7,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import { File } from 'lucide-react'; // Import the File icon
 
 export const Home = () => {
-  const [resumeFile] = useState('Angelina Mier_Resume.pdf'); // Store resume file path
+  const [resumeFile] = useState('/files/Angelina Mier_Resume.pdf'); // Store resume file path
 
   return (
     <section
@@ -25,7 +25,7 @@ export const Home = () => {
         <div className="flex justify-start gap-2 sm:space-x-4 flex-nowrap">
   <a
     href={resumeFile}
-    download="Angelina Mier_Resume.pdf"
+    download="/files/Angelina Mier_Resume.pdf"
     className="bg-gradient-to-r from-black-600 to-blue-500 text-white py-1.5 px-3 sm:py-3 sm:px-4 rounded-3xl font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] flex items-center gap-2 whitespace-nowrap text-sm sm:text-sm"
     target="_blank"
     rel="noopener noreferrer"

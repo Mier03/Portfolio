@@ -143,10 +143,10 @@ export const Projects = () => {
       technologies: ["PHP", "HTML/CSS", "MySQL", "MAILTRAP"],
       role: "Project Manager",
       files: [
-        { name: "ARMALYTICS_SDD.pdf", url: "ARMALYTICS_SDD.pdf" },
-        { name: "ARMALYTICS_SPMP.pdf", url: "ARMALYTICS_SPMP.pdf" },
-        { name: "ARMALYTICS_SRS.pdf", url: "ARMALYTICS_SRS.pdf" },
-        { name: "ARMALYTICS_TEST CASE.xlsx", url: "ARMALYTICS_TEST CASE.xlsx" },
+        { name: "/files/ARMALYTICS_SDD.pdf", url: "/files/ARMALYTICS_SDD.pdf" },
+        { name: "/files/ARMALYTICS_SPMP.pdf", url: "/files/ARMALYTICS_SPMP.pdf" },
+        { name: "/files/ARMALYTICS_SRS.pdf", url: "/files/ARMALYTICS_SRS.pdf" },
+        { name: "/files/ARMALYTICS_TEST CASE.xlsx", url: "/files/ARMALYTICS_TEST CASE.xlsx" },
       ],
       links: [
         { label: "GitHub", url: "https://github.com/Mier03/TeknoSpace" },
@@ -175,8 +175,8 @@ export const Projects = () => {
       technologies: ["React", "Firebase", "JavaScript", "Cloudinary"],
       role: "Full Stack Developer",
       files: [
-        { name: "SDD_Furwell.pdf", url: "SDD_Furwell.pdf" },
-        { name: "SRS_Furwell.pdf", url: "SRS_Furwell.pdf" },
+        { name: "/files/SDD_Furwell.pdf", url: "/files/SDD_Furwell.pdf" },
+        { name: "/files/SRS_Furwell.pdf", url: "/files/SRS_Furwell.pdf" },
       ],
       links: [
         { label: "GitHub", url: "https://github.com/laurenx122/marea-furwell" },
