@@ -4,11 +4,13 @@ import { RevealOnScroll } from "../RevealOnScroll";
 export const About = () => {
   const frontendSkills = ["React", "TypeScript", "TailwindCSS", "HTML/CSS"];
   const backendSkills = ["Node.js", "Appwrite", "Firebase", "PHP", "mySQL"];
-  const [activeCard, setActiveCard] = useState(null); // Track which card is tapped
+  const hardwareSkills = ["Arduino Configuration", "Breadboarding", "Microcontrollers", "Sensors", 
+    "Circuit Design","Prototyping", "PCB Design", "Soldering", "Embedded Systems"];
+  const [activeCard, setActiveCard] = useState(null); 
 
-  // Toggle active state for a specific card
+ 
   const handleCardTap = (cardId) => {
-    setActiveCard(activeCard === cardId ? null : cardId); // Toggle on/off
+    setActiveCard(activeCard === cardId ? null : cardId); 
   };
 
   return (
@@ -44,17 +46,30 @@ export const About = () => {
                 }`}
                 onTouchStart={() => handleCardTap("frontend")}
               >
-                <h3 className="text-xl font-bold mb-4">Frontend</h3>
-                <div className="flex flex-wrap gap-2">
+                <h3 className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-2xl font-bold mb-4">Software</h3>
+                <h3 className="text-10xl font-bold mb-4">Frontend</h3>
+                <div className="flex flex-wrap gap-3">
                   {frontendSkills.map((tech, key) => (
                     <span
                       key={key}
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
+                      className="bg-blue-500/10 text-sky-300 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
+                <h3 className="text-10xl font-bold mb-4">Backend</h3>
+                <div className="flex flex-wrap gap-3">
+                  {backendSkills.map((tech, key) => (
+                    <span
+                      key={key}
+                      className="bg-blue-500/10 text-sky-300 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                
               </div>
 
               <div
@@ -65,12 +80,12 @@ export const About = () => {
                 }`}
                 onTouchStart={() => handleCardTap("backend")}
               >
-                <h3 className="text-xl font-bold mb-4">Backend</h3>
-                <div className="flex flex-wrap gap-2">
-                  {backendSkills.map((tech, key) => (
+                <h3 className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-2xl font-bold mb-4">Hardware</h3>
+                <div className="flex flex-wrap gap-3">
+                  {hardwareSkills.map((tech, key) => (
                     <span
                       key={key}
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
+                      className="bg-blue-500/10 text-sky-300 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
                     >
                       {tech}
                     </span>

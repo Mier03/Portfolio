@@ -55,6 +55,9 @@ export const Home = () => {
             <img src="/images/me.jpg" alt="Slide 1" className="w-full h-full object-cover" />
           </SwiperSlide>
           <SwiperSlide>
+            <img src="/images/Angelina Mier.jpg" alt="Slide 1" className="w-full h-full object-cover" />
+          </SwiperSlide>
+          <SwiperSlide>
             <img src="/images/me1.jpg" alt="Slide 2" className="w-full h-full object-cover" />
           </SwiperSlide>
           <SwiperSlide>
