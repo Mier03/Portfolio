@@ -144,6 +144,26 @@ export const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
+
+    {
+      title: "Hardware Intern",
+      image: "/images/x.png",
+      logo: "/images/xeleqt-logo.png",
+      description:
+         "During my internship at Xeleqt, I was involved in hardware assembly and troubleshooting operations. I performed soldering of electronic components and breakout boards, assisted in device testing and repair, and helped ensure each unit met quality and functionality standards. I also collaborated with mentors and engineering teams to maintain efficiency and accuracy in production processes.",
+      technologies: ["Soldering", "Circuit Testing", "Troubleshooting"],
+      role: "🔧 Hardware Assembly, ⚙️ Troubleshooting, 🤝 Team Collaboration",
+      files: [
+        // { name: "/files/ARMALYTICS_SDD.pdf", url: "/files/ARMALYTICS_SDD.pdf" },
+        // { name: "/files/ARMALYTICS_SPMP.pdf", url: "/files/ARMALYTICS_SPMP.pdf" },
+        // { name: "/files/ARMALYTICS_SRS.pdf", url: "/files/ARMALYTICS_SRS.pdf" },
+        // { name: "/files/ARMALYTICS_TEST CASE.xlsx", url: "/files/ARMALYTICS_TEST CASE.xlsx" },
+      ],
+      links: [
+        // { label: "GitHub", url: "https://github.com/Mier03/TeknoSpace" },
+        // { label: "Live Demo", url: "http://teknospace.onlinewebshop.net" },
+      ],
+    },
     {
       title: "TeknoSpace",
       image: "/images/tekno-space.jpg",
