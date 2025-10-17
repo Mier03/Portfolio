@@ -20,9 +20,7 @@ export const Home = () => {
             Hi👋, I'm Angelina Mier
           </h1>
           <p className="text-gray-400 text-base sm:text-lg mb-8"  style={{ textAlign: 'justify' }}>
-            A Computer Engineering student at Cebu Institute of Technology, driven by a strong passion for building purposeful and scalable solutions that meet real-world business needs. I take pride in creating clean, efficient web applications that go beyond functionality—delivering seamless performance and intuitive user experiences. I'm seeking an internship where I can contribute to an innovative development team, apply and grow my technical skills, and collaborate on impactful software and hardware projects that solve meaningful problems.
-          </p>
-        <div className="flex justify-start gap-2 sm:space-x-4 flex-nowrap">
+A Computer Engineering student at Cebu Institute of Technology, driven by a strong passion for building purposeful and scalable solutions that address real-world business needs. I focus on developing clean, efficient web applications that go beyond functionality—delivering seamless performance and intuitive user experiences. Guided by integrity, continuous learning, and innovation, I strive to contribute to dynamic development teams and create impactful software and hardware projects that solve meaningful problems.        <div className="flex justify-start gap-2 sm:space-x-4 flex-nowrap">
   <a
     href={resumeFile}
     download="/files/Angelina Mier_Resume.pdf"
